@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WonderBiotics 达人邮件外发 · 配置中心</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: #f6f8fa; color: #1f2328; line-height: 1.6; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 24px 16px 80px; }
+  header { background: linear-gradient(135deg, #0f3d5e, #1b6b93); color: #fff; border-radius: 14px; padding: 28px 26px; margin-bottom: 24px; }
+  header h1 { font-size: 24px; margin-bottom: 6px; }
+  header p { opacity: .85; font-size: 14px; }
+  .badge { display:inline-block; background:#ffcf5c; color:#333; font-size:12px; font-weight:700; padding:2px 10px; border-radius:999px; margin-top:8px; }
+  section { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:20px 22px; margin-bottom:18px; }
+  section h2 { font-size:17px; margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+  .num { display:inline-flex; width:24px; height:24px; background:#1b6b93; color:#fff; border-radius:50%; align-items:center; justify-content:center; font-size:13px; flex:none; }
+  table { width:100%; border-collapse: collapse; font-size:14px; }
+  th, td { border:1px solid #e3e6ea; padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:#f0f4f8; font-weight:600; white-space:nowrap; }
+  td.mono, code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; word-break: break-all; }
+  .secret { background:#fff7ed; color:#9a3412; }
+  .secret b { font-weight:700; }
+  .tip { background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; margin-top:12px; }
+  .warn { background:#fff1f2; border-left:4px solid #e11d48; padding:10px 14px; border-radius:6px; font-size:13px; margin-top:12px; }
+  .btn { display:inline-block; background:#1b6b93; color:#fff; border:none; border-radius:8px; padding:10px 18px; font-size:14px; cursor:pointer; font-weight:600; text-decoration:none; }
+  .btn:hover { background:#155e80; }
+  .btn.ghost { background:#eef2f6; color:#1b6b93; border:1px solid #c9d6e0; }
+  pre { background:#0d1117; color:#c9d1d9; border-radius:8px; padding:14px; font-size:12.5px; overflow-x:auto; line-height:1.5; }
+  pre code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .copy-ok { color:#16a34a; font-size:13px; margin-left:10px; }
+  ol.steps { padding-left:20px; font-size:14px; }
+  ol.steps li { margin-bottom:6px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:640px){ .grid2 { grid-template-columns:1fr; } header h1{font-size:20px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>WonderBiotics 达人邮件外发 · 配置中心</h1>
+    <p>Mail Sending Config Center — 内部使用。所有发信批次所需的输入条件、账号、模板、追踪像素与测试入口，全部汇总于此。</p>
+    <span class="badge">⚠️ 本页为公开页面，账号授权码为机密信息，切勿外传</span>
+  </header>
+
+  <section>
+    <h2><span class="num">1</span> SMTP 服务器配置</h2>
+    <table>
+      <tr><th style="width:180px">项目</th><th>值</th></tr>
+      <tr><td>SMTP 服务器</td><td class="mono">smtp.feishu.cn</td></tr>
+      <tr><td>端口 / 加密</td><td class="mono">465 / SSL</td></tr>
+      <tr><td>发件人显示名</td><td class="mono">WonderBiotics</td></tr>
+      <tr><td>发件人落款</td><td class="mono">Kingdom · WonderBiotics</td></tr>
+    </table>
+    <div class="tip">三个发信账号共用同一 SMTP 服务器，登录账号 = 发信邮箱，密码 = 下方授权码。</div>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span> 发信账号（邮箱 + 授权码）</h2>
+    <table>
+      <tr><th>发信邮箱</th><th>授权码（密码）</th><th>典型批次</th></tr>
+      <tr>
+        <td class="mono">Kingsley@wonderbiotics.com</td>
+        <td class="mono secret"><b>eXr7L7LqE2Fvc2Io</b></td>
+        <td>黑五 977 封 / 展会 1025 / Grail 1026</td>
+      </tr>
+      <tr>
+        <td class="mono">Kimball@wonderbiotics.com</td>
+        <td class="mono secret"><b>HfNal3eCbpFTpugc</b></td>
+        <td>黑五 977 封 / 展会 1025 / Grail 1026</td>
+      </tr>
+      <tr>
+        <td class="mono">kyler.reed@wonderbiotics.com</td>
+        <td class="mono secret"><b>t5FvNo4XP27akjsz</b></td>
+        <td>黑五 977 封 / 展会 1025 / Grail 1026</td>
+      </tr>
+    </table>
+    <div class="warn">⚠️ 本页为公开 GitHub Pages，任何人可见。授权码明文展示是便于内部复制使用；如担心泄露，请尽快在飞书邮箱后台更换授权码并同步更新本页。</div>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span> 邮件标题与正文模板</h2>
+    <div class="grid2">
+      <div>
+        <h3 style="font-size:15px;margin-bottom:8px;">🧠 挑战赛邀请（Grail 1026 / 1027+ 复用）</h3>
+        <p style="font-size:13px;"><b>Subject：</b><br><span class="mono">We're Back Together — Join Our $13,500 Creator Challenge!</span></p>
+        <p style="font-size:13px;margin-top:10px;"><b>正文结构：</b></p>
+        <ol class="steps">
+          <li>Hi {Handle}，感谢之前的合作，你已是我们创作者家族的一员</li>
+          <li>介绍 Creator Challenge：达成 GMV 目标 + 对应视频数量即可参赛</li>
+          <li>优胜者可分享 <b>$13,500</b> 奖励池</li>
+          <li>挑战赛官网链接：<span class="mono">https://wonderblueken-afk.github.io/wonder-earners-challenge/</span></li>
+          <li>截止日期 <b>Nov 30</b>，尽快行动</li>
+          <li>Discord 邀请：<span class="mono">https://discord.gg/Fne5Kj9ef</span> —— 加入即成为 A-list 创作者</li>
+          <li>落款 Kingdom · WonderBiotics</li>
+          <li>正文末尾嵌入追踪像素（见第 4 节）</li>
+        </ol>
+      </div>
+      <div>
+        <h3 style="font-size:15px;margin-bottom:8px;">🖤 黑五促销（10-22 批次复用）</h3>
+        <p style="font-size:13px;"><b>Subject：</b><br><span class="mono">Black Friday Is Coming — Get Ready!</span></p>
+        <p style="font-size:13px;margin-top:10px;"><b>正文要点：</b></p>
+        <ol class="steps">
+          <li>Hi {Handle}，Black Friday 来了</li>
+          <li>30% 佣金 / 买 30 送 7 / 全年最低价</li>
+          <li>产品链接：<span class="mono">https://shop.tiktok.com/us/pdp/wonderbiotics-daily-prebiotic-fiber-powder-30-stick-packs/1732349905506177607</span></li>
+          <li>落款 Kingdom · WonderBiotics</li>
+        </ol>
+        <p style="font-size:13px;margin-top:6px;">⚠️ 该模板只保留产品链接，不含展会 / affiliate / brief 链接（用户要求）。</p>
+      </div>
+    </div>
+    <div class="tip">称呼规则：一律 <b>Hi + Handle</b>（如 Hi elitofit）。收件人名字取自表格「Handle」列，邮箱取自「Email」列。</div>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span> 追踪像素（HZERO）</h2>
+    <table>
+      <tr><th style="width:170px">接口</th><th>说明 / 值</th></tr>
+      <tr><td>获取 Token</td><td class="mono">POST https://www.report.wonderlab.top/api/oauth/oauth/token<br>Basic Auth：hscs-client : 123456，grant_type=client_credentials</td></tr>
+      <tr><td>注册邮件（发前）</td><td class="mono">PUT https://www.report.wonderlab.top/api//hitf/v2p/rest/invoke/SFpFUk86TUFJTF9UUkFDS0lORzp3b25kZXJsYWItYnVzaW5lc3Mtc2VydmljZS5tYWlsLXRyYWNraW5nLmVuY3J5cHRNYWls<br>payload：recipientAddress / mailTitle / senderAddress / recipientName → 返回唯一 encryptKey</td></tr>
+      <tr><td>像素 URL</td><td class="mono">GET https://www.report.wonderlab.top/api//hitf/v2p/public/rest/invoke/SFpFUk86TUFJTF9UUkFDS0lOR19QVUJMSUM6d29uZGVybGFiLWJ1c2luZXNzLXNlcnZpY2UubWFpbC10cmFja2luZy5yZWNvcmRNYWlsT3Blbg==?encryptKey={key}</td></tr>
+    </table>
+    <div class="tip">流程：每封邮件发信前调用「注册邮件」拿到唯一 key → 把像素 <span class="mono">&lt;img src="…?encryptKey=key"&gt;</span> 嵌入邮件正文 → 收件人打开邮件时自动触发。验证像素：curl 该 URL，返回「邮件打开操作记录成功」即生效。</div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span> 测试邮件</h2>
+    <p style="font-size:14px;margin-bottom:10px;">点击下方按钮复制「测试邮件脚本」到剪贴板，粘贴保存为 <span class="mono">test_mail.py</span>，然后运行：</p>
+    <pre><code id="testScript">python3 test_mail.py "你的测试收件邮箱@example.com"</code></pre>
+    <p style="font-size:14px;margin:10px 0;">脚本会自动登录配置好的 SMTP 账号，发送一封带追踪像素的测试邮件到指定邮箱，并打印像素校验结果。</p>
+    <button class="btn" onclick="copyScript()">📋 复制测试邮件脚本</button>
+    <span class="copy-ok" id="copyOk"></span>
+    <div class="tip">换发信账号测试：把脚本顶部 <span class="mono">SENDER_EMAIL / SENDER_PASSWORD</span> 换成第 2 节的任一账号即可。</div>
+  </section>
+
+  <section>
+    <h2><span class="num">6</span> 批次发信流程速览</h2>
+    <ol class="steps">
+      <li><b>选目标</b>：飞书表格（token <span class="mono">WkVls2I7DhQZsstK52IcM6u6nYd</span>）按「发送登记」列筛选批次（如 <span class="mono">Grail 清单：1026已发送</span>）</li>
+      <li><b>取信息</b>：每行取 Handle（称呼）与 Email（收件人）</li>
+      <li><b>分配账号</b>：三个发信账号轮询分配（Kingsley → Kimball → kyler.reed）</li>
+      <li><b>注册像素</b>：每封调「注册邮件」接口，拿唯一 encryptKey</li>
+      <li><b>发送</b>：SMTP 465 SSL 逐封发送（含像素 img 标签）</li>
+      <li><b>回写表格</b>：发送登记列写「已发送 + 日期」；用户点名的 K 列写发信账号</li>
+      <li><b>退信登记</b>：查 <span class="mono">mailer-daemon@feishu.cn</span> / <span class="mono">@googlemail.com</span> 退信 → 在表内标记「退信」，后续不再发</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2><span class="num">7</span> 相关链接</h2>
+    <table>
+      <tr><th>名称</th><th>链接</th></tr>
+      <tr><td>达人 Brief</td><td class="mono">https://wonderblueken-afk.github.io/daily-fiber-mix-brief/</td></tr>
+      <tr><td>挑战赛公开页</td><td class="mono">https://wonderblueken-afk.github.io/wonder-earners-challenge/</td></tr>
+      <tr><td>飞书主表</td><td class="mono">https://feishu.doubao.com/sheets/WkVls2I7DhQZsstK52IcM6u6nYd</td></tr>
+    </table>
+  </section>
+</div>
+
+<script>
+const TEST_SCRIPT = `#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""WonderBiotics 测试邮件脚本：发送一封带追踪像素的测试邮件
+用法: python3 test_mail.py 收件人邮箱@example.com
+"""
+import sys, smtplib, json, base64, urllib3
+import requests
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.utils import formataddr
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+PROXIES = {"http": None, "https": None}
+
+# ===== 配置区（按需修改）=====
+SMTP_HOST, SMTP_PORT = "smtp.feishu.cn", 465
+SENDER_EMAIL = "Kingsley@wonderbiotics.com"
+SENDER_PASSWORD = "eXr7L7LqE2Fvc2Io"
+SENDER_NAME = "WonderBiotics"
+SUBJECT = "We're Back Together — Join Our $13,500 Creator Challenge!"
+TOKEN_URL = "https://www.report.wonderlab.top/api/oauth/oauth/token"
+CLIENT_ID, CLIENT_SECRET = "hscs-client", "123456"
+REGISTER_URL = "https://www.report.wonderlab.top/api//hitf/v2p/rest/invoke/SFpFUk86TUFJTF9UUkFDS0lORzp3b25kZXJsYWItYnVzaW5lc3Mtc2VydmljZS5tYWlsLXRyYWNraW5nLmVuY3J5cHRNYWls"
+PIXEL_BASE = "https://www.report.wonderlab.top/api//hitf/v2p/public/rest/invoke/SFpFUk86TUFJTF9UUkFDS0lOR19QVUJMSUM6d29uZGVybGFiLWJ1c2luZXNzLXNlcnZpY2UubWFpbC10cmFja2luZy5yZWNvcmRNYWlsT3Blbg=="
+# ====================
+
+def get_token():
+    auth = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode()).decode()
+    r = requests.post(TOKEN_URL, headers={"Authorization": f"Basic {auth}",
+        "Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json"},
+        data={"grant_type": "client_credentials"}, proxies=PROXIES, verify=False, timeout=30)
+    r.raise_for_status()
+    return r.json()["access_token"]
+
+def register_mail(token, to_addr, recipient_name):
+    payload = {"recipientAddress": to_addr, "mailTitle": SUBJECT,
+               "senderAddress": SENDER_EMAIL, "recipientName": recipient_name}
+    r = requests.put(REGISTER_URL, headers={"Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"}, data=json.dumps(payload),
+        verify=False, proxies=PROXIES, timeout=30)
+    if r.status_code != 200:
+        raise RuntimeError(f"注册接口 {r.status_code}: {r.text[:200]}")
+    key = r.text.strip().strip('"')
+    if not key or not key.isalnum():
+        raise RuntimeError(f"密钥异常: {key}")
+    return key
+
+def main():
+    if len(sys.argv) < 2:
+        print("用法: python3 test_mail.py 收件人邮箱"); sys.exit(1)
+    to_addr = sys.argv[1].strip()
+    recipient_name = to_addr.split("@")[0]
+    token = get_token()
+    key = register_mail(token, to_addr, recipient_name)
+    pixel = f'<img src="{PIXEL_BASE}?encryptKey={key}" width="1" height="1" alt="" style="display:none" />'
+    html = f"""<html><body>
+<p>Hi {recipient_name},</p>
+<p>This is a test email from WonderBiotics with tracking pixel.</p>
+{pixel}
+</body></html>"""
+    msg = MIMEMultipart("alternative")
+    msg["From"] = formataddr((SENDER_NAME, SENDER_EMAIL))
+    msg["To"] = to_addr
+    msg["Subject"] = SUBJECT
+    msg.attach(MIMEText(html, "html", "utf-8"))
+    with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=60) as s:
+        s.login(SENDER_EMAIL, SENDER_PASSWORD)
+        s.sendmail(SENDER_EMAIL, [to_addr], msg.as_string())
+    print(f"[OK] 测试邮件已发送至 {to_addr}，key={key}")
+    r = requests.get(PIXEL_BASE + "?encryptKey=" + key, verify=False,
+                     proxies=PROXIES, timeout=20)
+    print(f"[像素] HTTP {r.status_code} → {r.text[:50]}")
+
+if __name__ == "__main__":
+    main()
+`;
+
+function copyScript(){
+  navigator.clipboard.writeText(TEST_SCRIPT).then(()=>{
+    document.getElementById("copyOk").textContent = "✓ 已复制到剪贴板，粘贴保存为 test_mail.py 即可运行";
+  }).catch(()=>{
+    const ta=document.createElement("textarea");
+    ta.value=TEST_SCRIPT; document.body.appendChild(ta);
+    ta.select(); document.execCommand("copy"); document.body.removeChild(ta);
+    document.getElementById("copyOk").textContent = "✓ 已复制";
+  });
+}
+</script>
+</body>
+</html>
